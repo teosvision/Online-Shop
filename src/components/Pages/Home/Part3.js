@@ -5,8 +5,8 @@ import icon3 from "../../photo/icon3.png";
 import Container from "@mui/material/Container";
 const Part3 = () => {
   return (
-    <div style={{ background: " #EBD1A4" }}>
-      <Container maxWidth="lg" className="big-container3">
+    <div className="container-3">
+      <Container className="big-container3">
         <div className="container3">
           <h2>
             Custom Furniture <br /> Built Only For You

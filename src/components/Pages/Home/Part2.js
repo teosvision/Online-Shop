@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useProductsContext } from "../../../Context/Contexti/product_context";
 import { Link } from "react-router-dom";
 import { formatPrice } from "../../../Context/utilis/helpers";
 import Loading from "../../special-components/Loading";
 import Error from "../../special-components/Error";
+import SearchIcon from "@mui/icons-material/Search";
 const Part2 = () => {
   const {
     products_loading: loading,
@@ -19,7 +20,7 @@ const Part2 = () => {
   }
 
   return (
-    <section className="containeri-2 ">
+    <section className="container-2 ">
       <div>
         <h2>Featured Products</h2>
       </div>
@@ -27,14 +28,17 @@ const Part2 = () => {
       <div className="items-container">
         {featured.slice(0, 3).map((product) => {
           return (
-            <div className="item" key={product.id}>
-              <Link className="link" to={`/Products/${product.id}`}>
+            <div className="item">
+              <div className="container" key={product.id}>
                 <img src={product.image} alt={product.name} />
-                <div className="item-description ">
-                  <p>{product.name}</p>
-                  <p className="price">{formatPrice(product.price)}</p>
-                </div>
-              </Link>
+                <Link className="link" to={`/Products/${product.id}`}>
+                  <SearchIcon />
+                </Link>
+              </div>
+              <div className="item-description ">
+                <p>{product.name}</p>
+                <p className="price">{formatPrice(product.price)}</p>
+              </div>
             </div>
           );
         })}

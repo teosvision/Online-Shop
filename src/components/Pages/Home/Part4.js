@@ -1,9 +1,9 @@
 import React from "react";
 import Container from "@mui/material/Container";
-import { Button, TextField } from "@mui/material";
+import { TextField } from "@mui/material";
 const Part4 = () => {
   return (
-    <Container maxWidth="lg" className="big-container4">
+    <Container className="big-container4">
       <h2>Join our newsletter and get 20% off!</h2>
 
       <div className="inside-container">
@@ -15,9 +15,9 @@ const Part4 = () => {
           </p>
         </div>
         <div className="item">
-          <form>
-            <TextField size="small" label="Enter your email" />
-            <Button variant="outlined">Subscribe</Button>
+          <form className="form-input">
+            <input type="email" placeholder="Enter your email" />
+            <button>Subscribe</button>
           </form>
         </div>
       </div>

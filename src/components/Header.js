@@ -20,18 +20,24 @@ const Header = () => {
       <Container maxWidth="lg">
         <div className="navbar">
           <Link to={"/"} className="logo">
-            <h3>TheShop</h3>
+            <h3>Shop</h3>
           </Link>
           <ul className="button">
             {navbarlinks.map((link) => {
               const { id, text, url } = link;
               return (
                 <li key={id}>
-                  <Link to={url}>{text}</Link>
+                  <Link className="link" to={url}>
+                    {text}
+                  </Link>
                 </li>
               );
             })}
-            {myUser ? <Link to={"/Checkout"}>Checkout</Link> : null}
+            {myUser ? (
+              <Link className="link" to={"/Checkout"}>
+                Checkout
+              </Link>
+            ) : null}
           </ul>
           <div className="cart">
             <Link to="/CartPage">

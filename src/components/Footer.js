@@ -5,7 +5,7 @@ const Footer = () => {
     <div className="footer">
       <h5>
         &copy; {new Date().getFullYear()}
-        <span className="theshop">TheShop.</span>
+        <span className="theshop">Top-Shop.</span>
       </h5>
       <h5>All rights reserved</h5>
     </div>
