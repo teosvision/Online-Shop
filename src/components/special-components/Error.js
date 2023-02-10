@@ -1,8 +1,13 @@
 import React from "react";
-import { Navigate } from "react-router-dom";
 
 const Error = () => {
-  return <Navigate to="/" />;
+  return (
+    <div
+      style={{ display: "flex", justifyContent: "center", marginTop: "4rem" }}
+    >
+      <h2>An error ocurred !</h2>
+    </div>
+  );
 };
 
 export default Error;
