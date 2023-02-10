@@ -10,7 +10,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Checkout from "./components/Pages/checkout/Checkout";
 import PrivateRoute from "./components/special-components/PrivateRoute";
-import Error from "./components/special-components/Error";
+import Error from "./components/Pages/Error";
 const App = () => {
   return (
     <BrowserRouter>
