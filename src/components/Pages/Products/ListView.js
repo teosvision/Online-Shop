@@ -1,10 +1,9 @@
-import { Container } from "@mui/system";
 import React from "react";
 import { Link } from "react-router-dom";
 import { formatPrice } from "../../../Context/utilis/helpers";
 const ListView = ({ products }) => {
   return (
-    <Container>
+    <div className="liston">
       {products.map((item) => {
         return (
           <div className="listview" key={item.id}>
@@ -20,7 +19,7 @@ const ListView = ({ products }) => {
           </div>
         );
       })}
-    </Container>
+    </div>
   );
 };
 

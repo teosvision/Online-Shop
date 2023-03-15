@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import Dialog from "@mui/material/Dialog";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
-import navbarlinks from "./components/links/navbarlinks";
+import navbarlinks from "./links/navbarlinks";
 import { Link } from "react-router-dom";
 import GrainIcon from "@mui/icons-material/Grain";
-import { useUserContext } from "./Context/Contexti/user_context";
-import { useCartContext } from "./Context/Contexti/cart_context";
+import { useUserContext } from "../Context/Contexti/user_context";
+import { useCartContext } from "../Context/Contexti/cart_context";
 import CloseIcon from "@mui/icons-material/Close";
 import PersonAddAlt1Icon from "@mui/icons-material/PersonAddAlt1";
 import PersonRemoveIcon from "@mui/icons-material/PersonRemove";
-import cart from "./components/photo/cart.png";
+import cart from "../components/photo/cart.png";
 function Sidebar() {
   const { total_items, clearCart } = useCartContext();
   const { loginWithRedirect, myUser, logout } = useUserContext();
@@ -49,18 +49,20 @@ function Sidebar() {
             const { id, text, url } = link;
             return (
               <li key={id}>
-                <Link to={url}>{text}</Link>
+                <Link onClick={handleClose} to={url}>
+                  {text}
+                </Link>
               </li>
             );
           })}
           {myUser ? (
-            <Link className="link" to={"Checkout"}>
+            <Link onClick={handleClose} className="link" to={"Checkout"}>
               Checkout
             </Link>
           ) : null}
         </ul>
         <div className=" sidebar-cart">
-          <Link to="/CartPage">
+          <Link onClick={handleClose} to="/CartPage">
             Cart
             <span>
               <img src={cart} alt="/" />

@@ -4,7 +4,7 @@ import Container from "@mui/material/Container";
 import { Link } from "react-router-dom";
 import navbarlinks from "./links/navbarlinks";
 import "../components/style/Style.scss";
-import Sidebar from "../Sidebar";
+import Sidebar from "./Sidebar";
 import { useCartContext } from "../Context/Contexti/cart_context";
 import cart from "./photo/cart.png";
 import PersonAddAlt1Icon from "@mui/icons-material/PersonAddAlt1";

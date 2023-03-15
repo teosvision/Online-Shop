@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import Home from "./components/Pages/Home/Home";
 import Products from "./components/Pages/Products/Products";
@@ -13,7 +13,7 @@ import PrivateRoute from "./components/special-components/PrivateRoute";
 import Error from "./components/Pages/Error";
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="App">
         <Header />
         <Layout>
@@ -37,7 +37,7 @@ const App = () => {
         </Layout>
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
